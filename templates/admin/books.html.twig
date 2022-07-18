@@ -1,0 +1,20 @@
+{%  extends 'base.html.twig' %}
+
+{% block main %}
+    {% for book in books %}
+        {% if book.isPublished %}
+            <article class="list">
+                <h2>{{ book. title }}</h2>
+                <p> {{ book. description }}</p>
+
+                <div class="moove-bouton">
+                    <a class="bouton" href="{{ path('admin_book', {'id':book.id}) }}">Ouvrir</a>
+                    <a href="{{ path('admin_insert_book') }}">Ajouter un livre</a>
+                    <a href="{{ path('admin_update_book', {'id':book.id}) }}">Modifier</a>
+                    <a href="{{ path('admin_delete_book', {'id':book.id}) }}">Suprimmer un livre</a>
+                </div>
+
+            </article>
+        {% endif %}
+    {% endfor%}
+{% endblock main %}

@@ -1,0 +1,21 @@
+{%  extends 'base.html.twig' %}
+
+{% block main %}
+    {{ form_start(form) }}
+
+    {{ form_label(form.title, 'title', {'label_attr': {'class': 'form-label'}}) }}
+    {{ form_widget(form.title, {'attr': {'class': 'form-control'}}) }}
+    {{ form_errors(form.title) }}
+
+    {{ form_label(form.description, 'description', {'label_attr': {'class': 'form-check-label'}}) }}
+    {{ form_widget(form.description, {'attr': {'class': 'form-check-label'}}) }}
+
+    {{ form_label(form.isPublished, 'isPublished ?', {'label_attr': {'class': 'form-check-label'}}) }}
+    {{ form_widget(form.isPublished, {'attr': {'class': 'form-check-label'}}) }}
+
+    {{ form_widget(form.submit, {'attr': {'class': 'btn btn-primary'}}) }}
+
+    {{ form_end(form) }}
+
+
+{% endblock %}

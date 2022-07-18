@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: lightpink;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    padding-bottom: 3%;
+    font-size: 72px;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    margin: 2vh;
+}
